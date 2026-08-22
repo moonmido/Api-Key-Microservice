@@ -88,7 +88,7 @@ public class CreateApiKey implements CreateApiKeyPort {
         repo.save(myApi);
 
         // Cache API key -> userId in Redis
-        String redisKey = "api_key:" + apiKey;
+        String redisKey = "api_key:" + encodedApiKey;
 
         redisTemplate.opsForValue().set(
                 redisKey,
