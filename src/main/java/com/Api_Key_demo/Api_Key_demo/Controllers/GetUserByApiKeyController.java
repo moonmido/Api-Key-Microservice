@@ -23,7 +23,7 @@ public class GetUserByApiKeyController {
         try {
             return ResponseEntity.ok(port.getUserIdByApiKey(api));
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Unexpected error");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Api Key Not Found");
         }
     }
 }
