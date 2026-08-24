@@ -11,4 +11,6 @@ public interface MyApiRepo extends JpaRepository<MyApi,Long> {
     List<MyApi> findMyApiByKeyHash(String keyHash);
 
     void deleteByUserId(String userId);
+
+    List<MyApi> findByUserId(String userId);
 }
